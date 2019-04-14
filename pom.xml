@@ -5,4 +5,20 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>packback-cadastro</name>
   <description>Software para gerenciamento de usuários do Packback</description>
+  
+  <dependencies>
+  	<dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-core</artifactId>
+	  <version>RELEASE</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>org.postgresql</groupId>
+	  <artifactId>postgresql</artifactId>
+	  <version>RELEASE</version>
+	</dependency>
+	
+  </dependencies>
+  
 </project>
