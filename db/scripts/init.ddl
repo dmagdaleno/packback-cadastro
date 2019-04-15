@@ -1,7 +1,9 @@
 CREATE DATABASE packback_db
     WITH
     OWNER = postgres
-    ENCODING = 'UTF8';
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'pt_BR.utf8' 
+    LC_CTYPE = 'pt_BR.utf8';
 
 \c packback_db
 
