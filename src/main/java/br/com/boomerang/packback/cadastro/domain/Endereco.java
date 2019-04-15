@@ -28,6 +28,24 @@ public class Endereco {
     private String estado;
     private String pais;
     
+    public Endereco() {
+		super();
+	}
+    
+	public Endereco(Long id, Usuario usuario, String cep, String rua, Integer numero, String bairro, String cidade,
+			String estado, String pais) {
+		super();
+		this.id = id;
+		this.usuario = usuario;
+		this.cep = cep;
+		this.rua = rua;
+		this.numero = numero;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.pais = pais;
+	}
+	
 	public Long getId() {
 		return id;
 	}

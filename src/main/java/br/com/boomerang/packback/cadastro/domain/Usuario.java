@@ -1,7 +1,7 @@
 package br.com.boomerang.packback.cadastro.domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -35,17 +35,17 @@ public class Usuario {
     private Collection<Endereco> enderecos;
     
     public Usuario() {
-    	this("Indefinido", "Indefinido", null, null, null, Collections.emptyList());
+    	this("Indefinido", "Indefinido", null, null, null);
     }
     
-    public Usuario(String email, String nome, String cpf, String razaoSocial, String cnpj, Collection<Endereco> enderecos) {
+    public Usuario(String email, String nome, String cpf, String razaoSocial, String cnpj) {
 		super();
 		this.email = email;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
-		this.enderecos = enderecos;
+		this.enderecos = new ArrayList<>();
 		
 		if(cnpj != null) {
 			this.tipo = TipoUsuario.PRODUTOR;
@@ -125,7 +125,8 @@ public class Usuario {
 	}
 
 	public void setEnderecos(Collection<Endereco> enderecos) {
-		this.enderecos = enderecos;
+		for(Endereco endereco: enderecos)
+			adicionaEndereco(endereco);
 	}
 
 	@Override

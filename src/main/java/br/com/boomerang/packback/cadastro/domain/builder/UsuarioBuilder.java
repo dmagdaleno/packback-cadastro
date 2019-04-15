@@ -46,7 +46,9 @@ public class UsuarioBuilder {
 	}
 	
 	public Usuario constroi() {
-		return new Usuario(nome, email, cpf, razaoSocial, cnpj, enderecos);
+		Usuario usuario = new Usuario(nome, email, cpf, razaoSocial, cnpj);
+		usuario.setEnderecos(enderecos);
+		return usuario;
 	}
 	
 }
